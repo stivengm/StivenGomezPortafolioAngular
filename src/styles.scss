@@ -2,4 +2,19 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+.btn {
+    padding: 10px 20px;
+    border-radius: 9px;
+}
+.btn-primary {
+    background: #FFFFFF;
+    color: #221f1f;
+    border: 1px solid #221f1f;
+}
+.btn-secundary {
+    background: #221f1f;
+    color: #FFFFFF;
+    border: 1px solid #221f1f;
 }
