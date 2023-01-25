@@ -2,8 +2,17 @@
     width: 100%;
     display: inline-flex;
     justify-content: space-around;
+    .title_nav_section {
+        .title_app {
+            font-weight: bold;
+            cursor: pointer;
+        }
+    }
     .options {
         display: flex;
+        .option_nav {
+            cursor: pointer;
+        }
         .separador {
             margin: 0px 4px;
         }
