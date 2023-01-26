@@ -1,8 +1,16 @@
 <div class="center-info">
+    <img [src]="response.imgProfile" alt="imgProfile" class="img_profile">
     <div class="information">
-        <h1>Stiven Gómez</h1>
-        <h3>Frontend developer - Mobile developer</h3>
+        <h1>{{ response.name }}</h1>
+        <h3 class="profession">{{ response.profession }}</h3>
         <button class="btn btn-secundary">Descargar CV</button>
         <button class="btn btn-primary">¿Hablamos?</button>
+    </div>
+</div>
+
+<div class="loading" *ngIf="isLoading">
+    <div class="centered_loading">
+        <span class="loader"></span>
+        <p>Cargando..</p>
     </div>
 </div>
