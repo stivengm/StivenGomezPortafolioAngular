@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ProfileModel } from 'src/app/core/models/profile_model';
+import { ChangeDataService } from 'src/app/core/services/change-data.service';
 import { GetProfileService } from '../../core/services/get-profile.service';
 
 @Component({
@@ -8,13 +9,13 @@ import { GetProfileService } from '../../core/services/get-profile.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  isLoading = true;
   response: ProfileModel = {};
-  constructor(private getProfileService: GetProfileService) { }
+  constructor(private getProfileService: GetProfileService, private dataService: ChangeDataService) { }
   
   ngOnInit() {
+    this.dataService.isLoading.emit(true);
     this.getProfileService.getProfile().subscribe(data => {
-      this.isLoading = false;
+      this.dataService.isLoading.emit(false);
       this.response = data
     });
   }
