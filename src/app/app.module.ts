@@ -10,6 +10,7 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { GetProfileService } from './core/services/get-profile.service';
 
 import { HttpClientModule } from '@angular/common/http';
+import { LoadingComponent } from './components/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     LayoutComponent,
     ContactComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    LoadingComponent,
   ],
   imports: [
     BrowserModule,
