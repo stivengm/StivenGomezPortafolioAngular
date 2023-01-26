@@ -7,6 +7,9 @@ import { HomeComponent } from './components/home/home.component';
 import { LayoutComponent } from './layout/layout.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ProjectsComponent } from './components/projects/projects.component';
+import { GetProfileService } from './core/services/get-profile.service';
+
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,9 +21,10 @@ import { ProjectsComponent } from './components/projects/projects.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ GetProfileService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
