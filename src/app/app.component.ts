@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ChangeDataService } from './core/services/change-data.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'stiven_gomez_portfolio';
+  isLoading: boolean = true;
+  constructor(public dataService: ChangeDataService) { }
+
+  ngOnInit() {
+    this.dataService.isLoading.subscribe(data => this.isLoading = data);
+  }
 }
