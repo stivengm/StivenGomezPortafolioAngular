@@ -11,6 +11,7 @@ import { GetProfileService } from './core/services/get-profile.service';
 
 import { HttpClientModule } from '@angular/common/http';
 import { LoadingComponent } from './components/loading/loading.component';
+import { AboutMeComponent } from './components/about-me/about-me.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { LoadingComponent } from './components/loading/loading.component';
     ContactComponent,
     ProjectsComponent,
     LoadingComponent,
+    AboutMeComponent,
   ],
   imports: [
     BrowserModule,
