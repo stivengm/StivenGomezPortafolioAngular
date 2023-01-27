@@ -1,8 +1,8 @@
 <div class="center-info">
-    <img [src]="response.imgProfile" alt="imgProfile" class="img_profile">
+    <img [src]="dataService.profileInformation.imgProfile" alt="imgProfile" class="img_profile">
     <div class="information">
-        <h1>{{ response.name }}</h1>
-        <h3 class="profession">{{ response.profession }}</h3>
+        <h1>{{ dataService.profileInformation.name }}</h1>
+        <h3 class="profession">{{ dataService.profileInformation.profession }}</h3>
         <button class="btn btn-secundary">Descargar CV</button>
         <button class="btn btn-primary">¿Hablamos?</button>
     </div>

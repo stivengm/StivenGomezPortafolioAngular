@@ -9,16 +9,7 @@ import { GetProfileService } from '../../core/services/get-profile.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  response: ProfileModel = {};
-  constructor(private getProfileService: GetProfileService, private dataService: ChangeDataService) { }
+  constructor(public dataService: ChangeDataService) { }
   
-  ngOnInit() {
-    this.dataService.isLoading.emit(true);
-    this.getProfileService.getProfile().subscribe(data => {
-      this.dataService.isLoading.emit(false);
-      this.response = data
-    });
-  }
-
 }
 
