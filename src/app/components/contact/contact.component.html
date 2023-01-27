@@ -4,21 +4,23 @@
 
     </div>
     <div class="contact">
-        <div class="option">
+        <div class="option" (click)="openContact(this.dataService.profileInformation.contact![2].url)">
             <img src="/assets/email.png" alt="email">
             <p>Correo</p>
         </div>
-        <div class="option">
+        <div class="option" (click)="openContact(this.dataService.profileInformation.contact![0].url)">
             <img src="/assets/linkedin.png" alt="linkedin">
             <p>LinkedIn</p>
         </div>
-        <div class="option">
+        <div class="option" (click)="openContact(this.dataService.profileInformation.contact![1].url)">
             <img src="/assets/github.png" alt="github">
             <p>GitHub</p>
         </div>
-        <div class="option">
+        <div class="option" (click)="openContact(this.dataService.profileInformation.contact![3].url)">
             <img src="/assets/whatsapp.png" alt="WhatsApp">
             <p>WhatsApp</p>
         </div>
     </div>
 </div>
+
+{{ dataService.profileInformation | json }}

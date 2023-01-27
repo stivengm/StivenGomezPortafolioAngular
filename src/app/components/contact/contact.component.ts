@@ -23,4 +23,8 @@ export class ContactComponent implements OnInit {
     }
   }
 
+  openContact(url: any) {
+    window.open(url, "_blank");
+  }
+
 }
