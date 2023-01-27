@@ -1,0 +1,10 @@
+.about_me_centered {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    .aboutme_section {
+        text-align: center;
+    }
+}
