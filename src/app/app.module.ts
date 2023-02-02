@@ -12,6 +12,9 @@ import { GetProfileService } from './core/services/get-profile.service';
 import { HttpClientModule } from '@angular/common/http';
 import { LoadingComponent } from './components/loading/loading.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage, getStorage } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,9 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
   ],
   providers: [ GetProfileService ],
   bootstrap: [AppComponent]
