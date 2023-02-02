@@ -97,6 +97,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "stiven_gomez_portfolio:build:production",
+            "firebaseProject": "portfolio-51fbb",
+            "firebaseHostingSite": "portfolio-51fbb"
+          }
         }
       }
     }

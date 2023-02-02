@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "portfolio-51fbb"
+  },
+  "targets": {
+    "portfolio-51fbb": {
+      "hosting": {
+        "stiven_gomez_portfolio": [
+          "portfolio-51fbb"
+        ]
+      }
+    }
+  }
+}
