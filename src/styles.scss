@@ -18,3 +18,28 @@ body {
     color: #FFFFFF;
     border: 1px solid #221f1f;
 }
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+}
+  
+  /* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+    .nav {
+        display: block !important;
+        .title_nav_section {
+            text-align: center;
+        }
+    }
+    .center-info {
+        text-align: center;
+        display: block !important;
+        position: relative !important;
+        top: initial !important;
+        left: initial !important;
+        transform: initial !important;
+        .information {
+            margin-left: 0 !important;
+        }
+    }
+}
